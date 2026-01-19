@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -20,6 +21,20 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Photo */}
+          <div className="mb-8 animate-fade-in">
+            <div className="relative inline-block">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20">
+                <img 
+                  src={profilePhoto} 
+                  alt="Yaswanth Deevi" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 rounded-full border-4 border-transparent bg-gradient-to-br from-primary/20 to-transparent pointer-events-none" />
+            </div>
+          </div>
+
           {/* Status badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
