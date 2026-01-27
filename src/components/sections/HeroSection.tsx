@@ -61,7 +61,7 @@ const HeroSection = () => {
             </a>
             <span className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4" />
-              <span>Hyderabad, India</span>
+              <span>Karlskrona, Sweden</span>
             </span>
           </div>
 
@@ -95,7 +95,7 @@ const HeroSection = () => {
               <Github className="w-6 h-6" />
             </a>
           </div>
-        </div>
+        </div>ss
       </div>
 
       {/* Scroll indicator */}
