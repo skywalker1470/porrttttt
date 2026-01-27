@@ -57,19 +57,11 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">8.54</div>
+                <div className="text-4xl font-bold text-primary mb-2">8.54/10</div>
                 <div className="text-sm text-muted-foreground">GPA at JNTUH</div>
               </div>
               <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">~70%</div>
-                <div className="text-sm text-muted-foreground">Computation Time Saved</div>
-              </div>
-              <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">~98%</div>
-                <div className="text-sm text-muted-foreground">ML Model Accuracy</div>
-              </div>
-              <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">3+</div>
+                <div className="text-4xl font-bold text-primary mb-2">4</div>
                 <div className="text-sm text-muted-foreground">Major Projects</div>
               </div>
             </div>
