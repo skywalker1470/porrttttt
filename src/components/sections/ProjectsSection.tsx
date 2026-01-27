@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Smartphone, MessageSquare, Brain } from "lucide-react";
+import { ExternalLink, Github, Smartphone, MessageSquare, Brain , ScanFace} from "lucide-react";
 
 const projects = [
   {
@@ -9,7 +9,7 @@ const projects = [
     description:
       "A digit recognition Android app using PyTorch Mobile and MNIST dataset. Built a lightweight CNN model achieving ~98% accuracy, optimized for mobile inference using TorchScript.",
     technologies: ["PyTorch", "Android", "CNN", "TorchScript", "Mobile ML"],
-    highlights: ["~98% Accuracy", "Mobile Optimized", "Real-time Inference"],
+    highlights: ["Mobile Optimized", "Real-time Inference"],
     github: "https://github.com/skywalker1470",
   },
   {
@@ -29,8 +29,18 @@ const projects = [
     description:
       "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
     technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
-    highlights: ["10x Faster", "70% Time Saved", "Research Grade"],
+    highlights: ["70% Time Saved", "Research Grade"],
     github: "https://github.com/skywalker1470",
+  },
+  {
+    icon: ScanFace,
+    title: "Deepfake Detection System",
+    subtitle: "Computer Vision",
+    description:
+      "Flask web app with PyTorch Xception CNN for real-time video deepfake detection. Uses hybrid transfer learning with MTCNN face preprocessing and Docker deployment.",
+    technologies: ["PyTorch", "Flask", "CNN", "Docker", "MTCNN"],
+    highlights: ["Transfer Learning", "Real-time Detection", "Docker"],
+    github: "https://github.com/skywalker1470/DeepFakeDetection",
   },
 ];
 
