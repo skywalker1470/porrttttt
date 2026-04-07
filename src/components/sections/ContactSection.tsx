@@ -97,7 +97,7 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">Phone</p>
                       <p className="font-medium group-hover:text-primary transition-colors">
-                        +91 9912445222
+                        +46 793430467
                       </p>
                     </div>
                   </a>
