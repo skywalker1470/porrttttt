@@ -14,7 +14,7 @@ const education = [
     institution: "JNTUH",
     location: "India",
     period: "December 2025",
-    grade: "GPA: 8.54",
+    grade: "GPA: 9.105",
     current: false,
   },
   {
