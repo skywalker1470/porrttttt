@@ -57,7 +57,7 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">8.54/10</div>
+                <div className="text-4xl font-bold text-primary mb-2">9.105/10</div>
                 <div className="text-sm text-muted-foreground">GPA at JNTUH</div>
               </div>
               <div className="p-6 rounded-xl bg-background border border-border text-center">
