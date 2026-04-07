@@ -50,7 +50,7 @@ const projects = [
       "A digit recognition Android app using PyTorch Mobile and MNIST dataset. Built a lightweight CNN model achieving ~98% accuracy, optimized for mobile inference using TorchScript.",
     technologies: ["PyTorch", "Android", "CNN", "TorchScript", "Mobile ML"],
     highlights: ["Mobile Optimized", "Real-time Inference"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/MNIST_project",
   },
   {
     icon: MessageSquare,
@@ -59,8 +59,7 @@ const projects = [
     description:
       "Full-stack real-time chat application built with AWS services. Features authentication via Cognito, serverless Lambda functions, and DynamoDB for persistent storage.",
     technologies: ["AWS", "Cognito", "Lambda", "DynamoDB", "S3", "JavaScript"],
-    highlights: ["Real-time Messaging", "Serverless", "Secure Auth"],
-    github: "https://github.com/skywalker1470/MNIST_project",
+    highlights: ["Real-time Messaging", "Serverless", "Secure Auth"]
   },
   {
     icon: Users,
