@@ -50,7 +50,7 @@ const HeroSection = () => {
               className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+43 733467669</span>
+              <span>+43 793430467</span>
             </a>
             <a 
               href="mailto:dvnsyaswanth@gmail.com" 
