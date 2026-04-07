@@ -1,7 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Smartphone, MessageSquare, Brain , ScanFace} from "lucide-react";
+import { ExternalLink, Github, Smartphone, MessageSquare, Brain, ScanFace, Users, TrendingDown, Activity } from "lucide-react";
 
 const projects = [
+  {
+    icon: ScanFace,
+    title: "Deepfake Detection System",
+    subtitle: "Computer Vision",
+    description:
+      "Flask web app with PyTorch Xception CNN for real-time video deepfake detection. Uses hybrid transfer learning with MTCNN face preprocessing and Docker deployment.",
+    technologies: ["PyTorch", "Flask", "CNN", "Docker", "MTCNN"],
+    highlights: ["Transfer Learning", "Real-time Detection", "Docker"],
+    github: "https://github.com/skywalker1470/DeepFakeDetection",
+  },
+  {
+    icon: Activity,
+    title: "Anomaly Detection in Heating Systems",
+    subtitle: "Streaming ML Pipeline",
+    description:
+      "Real-time streaming anomaly detection pipeline for multi-room building heating systems using FP-Growth association rule mining. Sliding window approach achieves under 30s detection latency. Evaluated against Isolation Forest, K-Means, and DBSCAN baselines with agreement matrices and ROC-style curves.",
+    technologies: ["Python", "FP-Growth", "NumPy", "SciPy", "Scikit-learn"],
+    highlights: ["<30s Latency", "4 Baseline Comparison", "Pattern Stability Analysis"],
+    github: "https://github.com/skywalker1470",
+  },
+  {
+    icon: TrendingDown,
+    title: "Customer Segmentation & Churn Prediction",
+    subtitle: "ML & Analytics",
+    description:
+      "End-to-end pipeline combining K-Means clustering (K=4) for customer segmentation with a Gradient Boosting classifier for churn prediction. Achieved CV ROC AUC of 0.87 ± 0.01 on 5-fold stratified cross-validation. Segments include Champions, Loyalists, Dormant, and At-Risk customers.",
+    technologies: ["Python", "Scikit-learn", "XGBoost", "PCA", "Pandas"],
+    highlights: ["ROC AUC: 0.87", "4 Customer Segments", "Interactive Dashboard"],
+    github: "https://github.com/skywalker1470",
+  },
+  {
+    icon: Brain,
+    title: "Hybrid Optimization Framework",
+    subtitle: "DRDO Research",
+    description:
+      "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
+    technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
+    highlights: ["70% Time Saved", "Research Grade"],
+    github: "https://github.com/skywalker1470",
+  },
   {
     icon: Smartphone,
     title: "MNIST Digit Classification",
@@ -23,24 +63,14 @@ const projects = [
     github: "https://github.com/skywalker1470",
   },
   {
-    icon: Brain,
-    title: "Hybrid Optimization Framework",
-    subtitle: "DRDO Research",
+    icon: Users,
+    title: "HR Analytics & Attrition Modeling",
+    subtitle: "People Analytics",
     description:
-      "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
-    technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
-    highlights: ["70% Time Saved", "Research Grade"],
+      "End-to-end attrition analysis on the IBM HR Analytics dataset (1,470 records, 35 features). Applied Mann-Whitney U, Chi-square, and point-biserial statistical tests to identify key drivers: overtime, job satisfaction, and years since last promotion. Built Logistic Regression and Random Forest classifiers with cohort-based retention analysis across 8 quarterly hiring cohorts.",
+    technologies: ["Python", "Scikit-learn", "SciPy", "Pandas", "Matplotlib"],
+    highlights: ["Statistical Hypothesis Testing", "Cohort Retention Analysis", "Dual Classifiers"],
     github: "https://github.com/skywalker1470",
-  },
-  {
-    icon: ScanFace,
-    title: "Deepfake Detection System",
-    subtitle: "Computer Vision",
-    description:
-      "Flask web app with PyTorch Xception CNN for real-time video deepfake detection. Uses hybrid transfer learning with MTCNN face preprocessing and Docker deployment.",
-    technologies: ["PyTorch", "Flask", "CNN", "Docker", "MTCNN"],
-    highlights: ["Transfer Learning", "Real-time Detection", "Docker"],
-    github: "https://github.com/skywalker1470/DeepFakeDetection",
   },
 ];
 
