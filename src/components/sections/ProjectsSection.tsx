@@ -20,7 +20,7 @@ const projects = [
       "Real-time streaming anomaly detection pipeline for multi-room building heating systems using FP-Growth association rule mining. Sliding window approach achieves under 30s detection latency. Evaluated against Isolation Forest, K-Means, and DBSCAN baselines with agreement matrices and ROC-style curves.",
     technologies: ["Python", "FP-Growth", "NumPy", "SciPy", "Scikit-learn"],
     highlights: ["<30s Latency", "4 Baseline Comparison", "Pattern Stability Analysis"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/Heating_System_Anomaly_Detection",
   },
   {
     icon: TrendingDown,
@@ -30,7 +30,7 @@ const projects = [
       "End-to-end pipeline combining K-Means clustering (K=4) for customer segmentation with a Gradient Boosting classifier for churn prediction. Achieved CV ROC AUC of 0.87 ± 0.01 on 5-fold stratified cross-validation. Segments include Champions, Loyalists, Dormant, and At-Risk customers.",
     technologies: ["Python", "Scikit-learn", "XGBoost", "PCA", "Pandas"],
     highlights: ["ROC AUC: 0.87", "4 Customer Segments", "Interactive Dashboard"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/Customer_segmentation_and_Churn",
   },
   {
     icon: Brain,
@@ -40,7 +40,7 @@ const projects = [
       "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
     technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
     highlights: ["70% Time Saved", "Research Grade"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/DRDO",
   },
   {
     icon: Smartphone,
@@ -60,7 +60,7 @@ const projects = [
       "Full-stack real-time chat application built with AWS services. Features authentication via Cognito, serverless Lambda functions, and DynamoDB for persistent storage.",
     technologies: ["AWS", "Cognito", "Lambda", "DynamoDB", "S3", "JavaScript"],
     highlights: ["Real-time Messaging", "Serverless", "Secure Auth"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/MNIST_project",
   },
   {
     icon: Users,
@@ -70,7 +70,7 @@ const projects = [
       "End-to-end attrition analysis on the IBM HR Analytics dataset (1,470 records, 35 features). Applied Mann-Whitney U, Chi-square, and point-biserial statistical tests to identify key drivers: overtime, job satisfaction, and years since last promotion. Built Logistic Regression and Random Forest classifiers with cohort-based retention analysis across 8 quarterly hiring cohorts.",
     technologies: ["Python", "Scikit-learn", "SciPy", "Pandas", "Matplotlib"],
     highlights: ["Statistical Hypothesis Testing", "Cohort Retention Analysis", "Dual Classifiers"],
-    github: "https://github.com/skywalker1470",
+    github: "https://github.com/skywalker1470/HR-Analytics",
   },
 ];
 
