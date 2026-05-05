@@ -2,24 +2,28 @@ import { Code2, Brain, Cloud, Wrench } from "lucide-react";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Full-Stack Development",
-    description: "MERN Stack, RESTful APIs, and modern web technologies",
-  },
-  {
     icon: Brain,
-    title: "Machine Learning",
-    description: "PyTorch, Deep Learning, and optimization algorithms",
+    title: "Applied Machine Learning",
+    description:
+      "Deepfake detection, anomaly detection, and neural signal processing using PyTorch",
   },
   {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    description: "AWS, Docker, Git, and CI/CD pipelines",
+    icon: Code2,
+    title: "Deep Learning Systems",
+    description:
+      "Built CNN, RNN, and BiLSTM models with attention, optimization, and evaluation pipelines",
   },
   {
     icon: Wrench,
-    title: "Problem Solving",
-    description: "Algorithm design and performance optimization",
+    title: "Optimization & Algorithms",
+    description:
+      "Hybrid metaheuristics, genetic algorithms, and surrogate-assisted optimization (DRDO)",
+  },
+  {
+    icon: Cloud,
+    title: "MLOps & Deployment",
+    description:
+      "Flask apps, Docker, AWS, and end-to-end ML pipelines",
   },
 ];
 
@@ -30,39 +34,57 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">01. About Me</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Who I Am</h2>
+            <span className="text-primary font-mono text-sm">
+              01. About Me
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">
+              Who I Am
+            </h2>
           </div>
 
           {/* About content */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm an enthusiastic Computer Science Engineering student with a passion for 
-                building innovative software solutions. My experience spans from designing 
-                hybrid metaheuristic optimization frameworks at DRDO to creating mobile ML 
-                applications.
+                I'm a Master's student in Computer Science at Blekinge Tekniska
+                Högskola with a strong focus on applied machine learning and
+                optimization. I’ve worked on problems ranging from deepfake
+                detection and anomaly detection to neural signal processing and
+                time-series modeling.
               </p>
+
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Currently pursuing my Master's in Computer Science at Blekinge Tekniska Högskola, 
-                Sweden, I'm actively seeking opportunities to contribute to cutting-edge projects 
-                and grow as a developer.
+                During my research internship at DRDO, I developed a hybrid
+                optimization framework combining genetic algorithms with deep
+                neural network surrogates, achieving up to 10x faster convergence
+                on large-scale combinatorial problems.
               </p>
+
               <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding, I enjoy exploring new technologies, contributing to 
-                open-source projects, and solving algorithmic challenges.
+                I enjoy building end-to-end systems — from designing models like
+                BiLSTMs with attention to deploying real-world applications using
+                Flask, Docker, and AWS.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">9.105/10</div>
-                <div className="text-sm text-muted-foreground">GPA at JNTUH</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  9.1/10
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  GPA (JNTUH)
+                </div>
               </div>
+
               <div className="p-6 rounded-xl bg-background border border-border text-center">
-                <div className="text-4xl font-bold text-primary mb-2">4</div>
-                <div className="text-sm text-muted-foreground">Major Projects</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  10+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  ML Projects
+                </div>
               </div>
             </div>
           </div>
@@ -78,7 +100,9 @@ const AboutSection = () => {
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
