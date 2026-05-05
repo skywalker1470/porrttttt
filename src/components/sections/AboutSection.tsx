@@ -46,24 +46,15 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I'm a Master's student in Computer Science at Blekinge Tekniska
-                Högskola with a strong focus on applied machine learning and
-                optimization. I’ve worked on problems ranging from deepfake
-                detection and anomaly detection to neural signal processing and
-                time-series modeling.
+                I am a master's student of Computer Science from Blekinge Institute of Technology with experience in applied machine learning and optimization problems in deep fake detection, anomaly detection, neural signal processing, and time series analysis.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                During my research internship at DRDO, I developed a hybrid
-                optimization framework combining genetic algorithms with deep
-                neural network surrogates, achieving up to 10x faster convergence
-                on large-scale combinatorial problems.
+               While working as an intern at the DRDO lab, I created a hybrid approach to solving large scale optimization problems by integrating genetic algorithms with deep neural networks as surrogate models, leading to a 10× improvement in convergence.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                I enjoy building end-to-end systems — from designing models like
-                BiLSTMs with attention to deploying real-world applications using
-                Flask, Docker, and AWS.
+               I design end-to-end machine learning solutions from model architectures like CNNs, BiLSTMs, and attention mechanisms to applications with Flask, Docker, and AWS.
               </p>
             </div>
 
