@@ -1,16 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Smartphone, MessageSquare, Brain, ScanFace, Users, TrendingDown, Activity } from "lucide-react";
+import { ExternalLink, Github, Smartphone, MessageSquare, Brain, ScanFace, Users, TrendingDown, Activity, Radio } from "lucide-react";
 
 const projects = [
+  {
+    icon: Radio,
+    title: "Neural Digital Pre-Distortion (OpenDPD)",
+    subtitle: "Signal Processing / Deep Learning",
+    description:
+      "Custom DPD backbone architectures integrated into the dpdOpen framework: a residual MLP (MyMLPDPD) and a bidirectional LSTM with single-head attention (MyLSTMDPD), both operating on IQ signal pairs. Evaluated on DPA_200MHz using EVM and NMSE metrics with multi-panel diagnostic plots covering AM/AM, PSD, and IQ constellations.",
+    technologies: ["PyTorch", "BiLSTM", "Attention", "NumPy", "Signal Processing"],
+    highlights: ["BiLSTM + Attention", "EVM / NMSE Eval", "Residual MLP"],
+    github: "https://github.com/skywalker1470/OpenDPD_Project",
+  },
   {
     icon: ScanFace,
     title: "Deepfake Detection System",
     subtitle: "Computer Vision",
     description:
-      "Flask web app with PyTorch Xception CNN for real-time video deepfake detection. Uses hybrid transfer learning with MTCNN face preprocessing and Docker deployment.",
-    technologies: ["PyTorch", "Flask", "CNN", "Docker", "MTCNN"],
-    highlights: ["Transfer Learning", "Real-time Detection", "Docker"],
-    github: "https://github.com/skywalker1470/DeepFakeDetection",
+      "Flask web app using fine-tuned EfficientNet-B0 for binary deepfake classification on the Celeb-DF dataset. MTCNN handles face detection and alignment with a frame-skip inference strategy. Output video is re-encoded to H.264 via ffmpeg for browser-compatible playback with per-frame FAKE/REAL overlays.",
+    technologies: ["PyTorch", "EfficientNet-B0", "Flask", "MTCNN", "ffmpeg"],
+    highlights: ["Frame-level Inference", "Flask Deployment", "H.264 Re-encoding"],
+    github: "https://github.com/skywalker1470/DeepFakeReworked",
   },
   {
     icon: Activity,
@@ -23,6 +33,26 @@ const projects = [
     github: "https://github.com/skywalker1470/Heating_System_Anomaly_Detection",
   },
   {
+    icon: Brain,
+    title: "Hybrid Optimization Framework",
+    subtitle: "DRDO Research",
+    description:
+      "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
+    technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
+    highlights: ["10x Convergence", "70% Time Saved", "Research Grade"],
+    github: "https://github.com/skywalker1470/DRDO",
+  },
+  {
+    icon: Users,
+    title: "HR Analytics & Attrition Modeling",
+    subtitle: "People Analytics",
+    description:
+      "End-to-end attrition analysis on the IBM HR Analytics dataset (1,470 records, 35 features). Applied Mann-Whitney U, Chi-square, and point-biserial statistical tests to identify key drivers: overtime, job satisfaction, and years since last promotion. Built Logistic Regression and Random Forest classifiers with cohort-based retention analysis across 8 quarterly hiring cohorts.",
+    technologies: ["Python", "Scikit-learn", "SciPy", "Pandas", "Matplotlib"],
+    highlights: ["Statistical Hypothesis Testing", "Cohort Retention Analysis", "Dual Classifiers"],
+    github: "https://github.com/skywalker1470/HR-Analytics",
+  },
+  {
     icon: TrendingDown,
     title: "Customer Segmentation & Churn Prediction",
     subtitle: "ML & Analytics",
@@ -31,16 +61,6 @@ const projects = [
     technologies: ["Python", "Scikit-learn", "XGBoost", "PCA", "Pandas"],
     highlights: ["ROC AUC: 0.87", "4 Customer Segments", "Interactive Dashboard"],
     github: "https://github.com/skywalker1470/Customer_segmentation_and_Churn",
-  },
-  {
-    icon: Brain,
-    title: "Hybrid Optimization Framework",
-    subtitle: "DRDO Research",
-    description:
-      "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
-    technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
-    highlights: ["70% Time Saved", "Research Grade"],
-    github: "https://github.com/skywalker1470/DRDO",
   },
   {
     icon: Smartphone,
@@ -59,17 +79,7 @@ const projects = [
     description:
       "Full-stack real-time chat application built with AWS services. Features authentication via Cognito, serverless Lambda functions, and DynamoDB for persistent storage.",
     technologies: ["AWS", "Cognito", "Lambda", "DynamoDB", "S3", "JavaScript"],
-    highlights: ["Real-time Messaging", "Serverless", "Secure Auth"]
-  },
-  {
-    icon: Users,
-    title: "HR Analytics & Attrition Modeling",
-    subtitle: "People Analytics",
-    description:
-      "End-to-end attrition analysis on the IBM HR Analytics dataset (1,470 records, 35 features). Applied Mann-Whitney U, Chi-square, and point-biserial statistical tests to identify key drivers: overtime, job satisfaction, and years since last promotion. Built Logistic Regression and Random Forest classifiers with cohort-based retention analysis across 8 quarterly hiring cohorts.",
-    technologies: ["Python", "Scikit-learn", "SciPy", "Pandas", "Matplotlib"],
-    highlights: ["Statistical Hypothesis Testing", "Cohort Retention Analysis", "Dual Classifiers"],
-    github: "https://github.com/skywalker1470/HR-Analytics",
+    highlights: ["Real-time Messaging", "Serverless", "Secure Auth"],
   },
 ];
 
@@ -96,14 +106,16 @@ const ProjectsSection = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <project.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
 
                 {/* Content */}
