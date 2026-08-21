@@ -39,7 +39,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Focused on deep learning, computer vision, and multi-modal sensor fusion — from model
+            Focused on deep learning, computer vision, and multi-modal sensor fusion, from model
             compression and cross-hardware deployment to knowledge transfer for autonomous systems.
             Currently pursuing a Master's at BTH, Sweden.
           </p>

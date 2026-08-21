@@ -48,14 +48,14 @@ const AboutSection = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I'm a Computer Science Master's student at Blekinge Tekniska Högskola (BTH) with
                 substantial experience in deep learning, computer vision, and processing
-                multi-modal sensor streams — combining camera, pose, and raw signal data into a
+                multi-modal sensor streams, combining camera, pose, and raw signal data into a
                 unified decision-making pipeline.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
                 As a Computer Vision Engineer at SolarFi's FairWAI, I built a multi-person pose
-                perception pipeline across two radically different hardware backends — Apple
-                Vision on iPhone Neural Engine and INT8-quantized MoveNet on CPU — fusing both
+                perception pipeline across two radically different hardware backends, Apple
+                Vision on iPhone Neural Engine and INT8-quantized MoveNet on CPU, fusing both
                 into a single interface for a vision-language model to reason over.
               </p>
 

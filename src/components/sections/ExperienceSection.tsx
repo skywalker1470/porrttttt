@@ -9,13 +9,13 @@ const experiences = [
     bullets: [
       <>
         Built a perception pipeline for multi-person pose estimation across two hardware
-        backends — <span className="text-primary font-semibold">Apple Vision on iPhone Neural Engine</span> and{" "}
-        <span className="text-primary font-semibold">INT8-quantized MoveNet Lightning on CPU</span> — meeting
+        backends: <span className="text-primary font-semibold">Apple Vision on iPhone Neural Engine</span> and{" "}
+        <span className="text-primary font-semibold">INT8-quantized MoveNet Lightning on CPU</span>, meeting
         matched accuracy and latency constraints without retraining from scratch.
       </>,
       <>
-        Designed a hardware-agnostic interaction layer — a temporal pose-to-primitives mapping
-        system combining geometric heuristics with a calibrated MLP — to fuse keypoints from both
+        Designed a hardware-agnostic interaction layer, a temporal pose-to-primitives mapping
+        system combining geometric heuristics with a calibrated MLP, to fuse keypoints from both
         backbones into a common downstream representation.
       </>,
       <>
@@ -45,7 +45,7 @@ const experiences = [
     bullets: [
       <>
         Developed a novel approach to the P-Center Facility Location problem, replacing costly
-        fitness evaluations with a pre-trained deep neural network surrogate — transferring
+        fitness evaluations with a pre-trained deep neural network surrogate, transferring
         knowledge from an expensive exact model to a cheaper approximation and speeding up
         convergence by <span className="text-primary font-semibold">an order of magnitude</span>.
       </>,
