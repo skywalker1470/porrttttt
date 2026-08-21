@@ -47,9 +47,11 @@ const AboutSection = () => {
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I'm a Computer Science Master's student at Blekinge Tekniska Högskola (BTH) with
-                substantial experience in deep learning, computer vision, and processing
-                multi-modal sensor streams, combining camera, pose, and raw signal data into a
-                unified decision-making pipeline.
+                substantial experience in{" "}
+                <span className="text-foreground font-medium">deep learning</span> and{" "}
+                <span className="text-foreground font-medium">computer vision</span>, and
+                processing multi-modal sensor streams, combining camera, pose, and raw signal
+                data into a unified decision-making pipeline.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">

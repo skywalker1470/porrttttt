@@ -61,8 +61,9 @@ const ContactSection = () => {
             <span className="text-primary font-mono text-sm">06. Contact</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">Get In Touch</h2>
             <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-              I'm currently looking for internship opportunities. Whether you have a question or
-              just want to say hi, feel free to reach out!
+              I'm currently looking for Master's thesis and internship opportunities in computer
+              vision and deep learning. Whether you have a question or just want to say hi, feel
+              free to reach out!
             </p>
           </div>
 
