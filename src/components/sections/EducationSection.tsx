@@ -2,11 +2,13 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 
 const education = [
   {
-    degree: "Master's in Computer Science & Engineering",
+    degree: "M.S. in Computer Science & Engineering",
     institution: "Blekinge Tekniska Högskola",
     location: "Sweden",
     period: "Expected July 2027",
     grade: null,
+    coursework:
+      "Research Methodologies, Advanced Machine Learning, Deep Learning, Decision Support Systems",
     current: true,
   },
   {
@@ -15,6 +17,8 @@ const education = [
     location: "India",
     period: "December 2025",
     grade: "GPA: 9.105",
+    coursework:
+      "Machine Learning, Data Structures and Algorithms, Computer Networks, Object Oriented Programming, Python Programming",
     current: false,
   },
   {
@@ -23,6 +27,7 @@ const education = [
     location: "India",
     period: "April 2022",
     grade: "94%",
+    coursework: null,
     current: false,
   },
   {
@@ -31,6 +36,7 @@ const education = [
     location: "India",
     period: "December 2020",
     grade: "96%",
+    coursework: null,
     current: false,
   },
 ];
@@ -89,6 +95,11 @@ const EducationSection = () => {
                         <p className="text-muted-foreground">
                           {edu.institution}, {edu.location}
                         </p>
+                        {edu.coursework && (
+                          <p className="text-sm text-muted-foreground mt-2">
+                            <span className="font-medium">Relevant Coursework:</span> {edu.coursework}
+                          </p>
+                        )}
                       </div>
                       {edu.grade && (
                         <span className="px-3 py-1 text-sm rounded-lg bg-primary/10 text-primary font-semibold">

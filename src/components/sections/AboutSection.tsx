@@ -3,9 +3,9 @@ import { Code2, Brain, Cloud, Wrench } from "lucide-react";
 const highlights = [
   {
     icon: Brain,
-    title: "Applied Machine Learning",
+    title: "Computer Vision & Perception",
     description:
-      "Deepfake detection, anomaly detection, and neural signal processing using PyTorch",
+      "Multi-person pose estimation, deepfake detection, and multi-modal sensor fusion across camera, pose, and raw signal streams",
   },
   {
     icon: Code2,
@@ -21,9 +21,9 @@ const highlights = [
   },
   {
     icon: Cloud,
-    title: "MLOps & Deployment",
+    title: "Model Compression & Deployment",
     description:
-      "Flask apps, Docker, AWS, and end-to-end ML pipelines",
+      "Transfer learning, quantization/pruning, and cross-architecture deployment on Neural Engine and CPU",
   },
 ];
 
@@ -46,15 +46,25 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I am a master's student of Computer Science from Blekinge Institute of Technology with experience in applied machine learning and optimization problems in deep fake detection, anomaly detection, neural signal processing, and time series analysis.
+                I'm a Computer Science Master's student at Blekinge Tekniska Högskola (BTH) with
+                substantial experience in deep learning, computer vision, and processing
+                multi-modal sensor streams — combining camera, pose, and raw signal data into a
+                unified decision-making pipeline.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-               While working as an intern at the DRDO lab, I created a hybrid approach to solving large scale optimization problems by integrating genetic algorithms with deep neural networks as surrogate models, leading to a 10× improvement in convergence.
+                As a Computer Vision Engineer at SolarFi's FairWAI, I built a multi-person pose
+                perception pipeline across two radically different hardware backends — Apple
+                Vision on iPhone Neural Engine and INT8-quantized MoveNet on CPU — fusing both
+                into a single interface for a vision-language model to reason over.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-               I design end-to-end machine learning solutions from model architectures like CNNs, BiLSTMs, and attention mechanisms to applications with Flask, Docker, and AWS.
+                While interning at DRDO, I built a hybrid evolutionary optimization framework
+                that replaces costly fitness evaluations with a deep neural network surrogate,
+                speeding up convergence by an order of magnitude. I'm keen to apply this
+                expertise in transfer learning and federated learning to heterogeneous object
+                detection in autonomous vehicles.
               </p>
             </div>
 

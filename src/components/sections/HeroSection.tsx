@@ -34,13 +34,14 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Computer Science Engineer & Developer
+            Computer Vision & Deep Learning Engineer
           </p>
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Passionate about building efficient algorithms, web applications, and machine learning solutions. 
-            Currently pursuing Master's at BTH Sweden.
+            Focused on deep learning, computer vision, and multi-modal sensor fusion — from model
+            compression and cross-hardware deployment to knowledge transfer for autonomous systems.
+            Currently pursuing a Master's at BTH, Sweden.
           </p>
 
           {/* Contact info */}

@@ -1,23 +1,79 @@
 const skillCategories = [
   {
+    title: "Computer Vision & Perception",
+    skills: [
+      "CNNs",
+      "Pose Estimation (Apple Vision, MoveNet)",
+      "Face Detection & Alignment (MTCNN)",
+      "Frame-level Classification",
+      "Multi-modal Signal/Image Processing",
+    ],
+  },
+  {
+    title: "Deep Learning & Transfer",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Keras",
+      "RNNs",
+      "BiLSTM with Attention",
+      "Transfer Learning",
+      "Model Quantization (INT8/4-bit)",
+      "Model Pruning",
+      "ONNX",
+      "Core ML",
+    ],
+  },
+  {
+    title: "Optimization & Efficiency",
+    skills: [
+      "Evolutionary Algorithms",
+      "Surrogate Modeling",
+      "Combinatorial Optimization",
+      "Metaheuristics",
+      "Hardware-aware Trade-offs",
+    ],
+  },
+  {
+    title: "Machine Learning & Statistics",
+    skills: [
+      "Scikit-learn",
+      "XGBoost",
+      "LightGBM",
+      "Gradient Boosting",
+      "Random Forests",
+      "PCA",
+      "SHAP",
+      "Statistical Hypothesis Testing",
+    ],
+  },
+  {
+    title: "Data & Analytics",
+    skills: ["NumPy", "Pandas", "SciPy", "Matplotlib", "Seaborn", "Time-Series Analysis"],
+  },
+  {
     title: "Programming Languages",
-    skills: ["C++", "Python", "JavaScript (ES6+)", "TypeScript"],
+    skills: ["Python", "C++", "SQL", "Bash Scripting"],
   },
   {
-    title: "Web Development",
-    skills: ["React", "Node.js", "Express.js", "MongoDB", "RESTful APIs"],
-  },
-  {
-    title: "Machine Learning",
-    skills: ["PyTorch", "Deep Learning", "CNN Architecture", "Data Preprocessing"],
-  },
-  {
-    title: "Cloud & DevOps",
-    skills: ["AWS (S3, Lambda)", "Docker", "Git", "GitHub", "Jenkins"],
-  },
-  {
-    title: "Other Skills",
-    skills: ["Linux", "Agile", "Code Reviews", "Flutter Basics"],
+    title: "Extra Skills",
+    skills: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "RESTful APIs",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "AWS (S3, Lambda)",
+      "Docker",
+      "Git",
+      "GitHub",
+      "Jenkins",
+      "Linux",
+      "Jupyter",
+      "Flask Deployment",
+    ],
   },
 ];
 
@@ -60,7 +116,7 @@ const SkillsSection = () => {
               Constantly learning and exploring new technologies
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {["React", "Python", "AWS", "TypeScript", "PyTorch", "Docker"].map((tech) => (
+              {["PyTorch", "Python", "TensorFlow", "ONNX", "Core ML", "Docker"].map((tech) => (
                 <div
                   key={tech}
                   className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-all"
