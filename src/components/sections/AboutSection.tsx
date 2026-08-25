@@ -65,9 +65,7 @@ const AboutSection = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   While interning at DRDO, I built a hybrid evolutionary optimization framework
                   that replaces costly fitness evaluations with a deep neural network surrogate,
-                  speeding up convergence by an order of magnitude. I'm keen to apply this
-                  expertise in transfer learning and federated learning to heterogeneous object
-                  detection in autonomous vehicles.
+                  speeding up convergence by an order of magnitude.
                 </p>
               </div>
             </Reveal>

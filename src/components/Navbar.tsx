@@ -64,7 +64,7 @@ const Navbar = () => {
               </button>
             ))}
             <Button variant="heroOutline" size="sm" className="ml-4" asChild>
-              <a href="/Yaswanth_Deevi_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Resume_Yaswanth_Deevi.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
@@ -93,7 +93,7 @@ const Navbar = () => {
                 </button>
               ))}
               <Button variant="hero" size="sm" className="mt-4 mx-4" asChild>
-                <a href="/Yaswanth_Deevi_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Resume_Yaswanth_Deevi.pdf" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
               </Button>

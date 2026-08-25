@@ -6,9 +6,12 @@ const skillCategories = [
     skills: [
       "CNNs",
       "Pose Estimation (Apple Vision, MoveNet)",
+      "YOLOv8",
       "Face Detection & Alignment (MTCNN)",
       "Frame-level Classification",
       "Multi-modal Signal/Image Processing",
+      "OpenCV",
+      "ONNX Runtime",
     ],
   },
   {

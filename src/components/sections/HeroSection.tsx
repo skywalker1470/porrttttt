@@ -49,8 +49,8 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Focused on <span className="text-foreground">deep learning</span>,{" "}
               <span className="text-foreground">computer vision</span>, and multi-modal
-              sensor fusion, from model compression and cross-hardware deployment to knowledge
-              transfer for autonomous systems. Currently pursuing a Master's at BTH, Sweden.
+              sensor fusion, from model compression and cross-hardware deployment to real-time
+              perception pipelines. Currently pursuing a Master's at BTH, Sweden.
             </p>
           </Reveal>
 

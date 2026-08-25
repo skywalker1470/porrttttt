@@ -28,6 +28,18 @@ const experiences = [
         did not corrupt the fused representation.
       </>,
       <>
+        Prototyped a <span className="text-primary font-semibold">YOLOv8 and solvePnP-based 3D head-pose estimation</span>{" "}
+        enhancement for two underperforming interaction primitives, layered onto the production
+        pipeline (validated at <span className="text-primary font-semibold">macro F1 0.853</span> across
+        148 labeled clips) through an isolated wrapper architecture that kept the existing system
+        unaffected.
+      </>,
+      <>
+        Built a standalone rule-only A/B evaluation harness to test the new signal against
+        ground-truth data at zero retraining cost, and documented the comparison, including a
+        negative result on one primitive, in a fairness-aware technical report.
+      </>,
+      <>
         Ran per-primitive precision/recall and skin-tone/ethnicity disparity analysis across{" "}
         <span className="text-primary font-semibold">50 clips</span> to validate accuracy and
         fairness across demographics.
