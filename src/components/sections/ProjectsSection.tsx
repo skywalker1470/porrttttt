@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Smartphone, MessageSquare, Brain, ScanFace, Users, TrendingDown, Activity, Radio } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const projects = [
   {
@@ -89,77 +90,77 @@ const ProjectsSection = () => {
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">03. Projects</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Featured Work</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Featured Work</h2>
+            </div>
+          </Reveal>
 
           {/* Projects grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group flex flex-col p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
-              >
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <Reveal key={index} delay={(index % 3) * 90}>
+                <div className="group flex flex-col h-full p-6 rounded-none bg-background border border-border hover:border-primary/40 transition-colors duration-300">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-4">
                     <project.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  <span className="text-xs text-primary font-mono">{project.subtitle}</span>
-                  <h3 className="text-xl font-bold mt-1 mb-3">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-
-                  {/* Highlights */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.highlights.map((highlight, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-1 text-xs rounded-md bg-primary/10 text-primary font-medium"
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary"
                       >
-                        {highlight}
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <span className="text-xs text-primary font-mono">{project.subtitle}</span>
+                    <h3 className="text-xl font-semibold mt-1 mb-3">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
+
+                    {/* Highlights */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.highlights.map((highlight, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 text-xs rounded-md bg-primary/10 text-primary font-medium"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
+                    {project.technologies.slice(0, 4).map((tech, i) => (
+                      <span key={i} className="text-xs text-muted-foreground font-mono">
+                        {tech}
+                        {i < Math.min(project.technologies.length, 4) - 1 && " •"}
                       </span>
                     ))}
                   </div>
                 </div>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
-                  {project.technologies.slice(0, 4).map((tech, i) => (
-                    <span key={i} className="text-xs text-muted-foreground font-mono">
-                      {tech}
-                      {i < Math.min(project.technologies.length, 4) - 1 && " •"}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 
           {/* View more button */}
-          <div className="text-center mt-12">
-            <Button variant="heroOutline" size="lg" asChild>
-              <a href="https://github.com/skywalker1470" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5" />
-                View More on GitHub
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
-          </div>
+          <Reveal>
+            <div className="text-center mt-12">
+              <Button variant="heroOutline" size="lg" asChild>
+                <a href="https://github.com/skywalker1470" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5" />
+                  View More on GitHub
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </Button>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

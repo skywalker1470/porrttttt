@@ -1,4 +1,5 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const experiences = [
   {
@@ -75,53 +76,68 @@ const ExperienceSection = () => {
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">02. Experience</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Work Experience</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Work Experience</h2>
+            </div>
+          </Reveal>
 
           {/* Experience timeline */}
-          <div className="relative space-y-12">
-            {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
+          <div className="relative">
+            {/* Timeline rail */}
+            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-gradient-to-b from-primary via-border to-transparent" />
 
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative md:pl-0">
-                <div className="md:w-1/2 md:ml-auto md:pl-12">
-                  {/* Timeline dot */}
-                  <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 -translate-x-1/2 rounded-full bg-primary border-4 border-background" />
+            <div className="space-y-10">
+              {experiences.map((exp, index) => (
+                <Reveal key={index} delay={index * 120}>
+                  <div className="relative pl-10">
+                    {/* Timeline marker */}
+                    <span
+                      className={`absolute left-0 top-2 w-[15px] h-[15px] border-2 border-primary ${
+                        index === 0 ? "bg-primary" : "bg-background"
+                      }`}
+                    />
 
-                  <div className="p-6 md:p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 glow-soft">
-                    <div className="flex items-center gap-2 text-primary mb-2">
-                      <Briefcase className="w-5 h-5" />
-                      <span className="font-semibold">{exp.role}</span>
+                    <div className="p-6 md:p-8 bg-card border border-border hover:border-primary/40 transition-colors duration-300">
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <Briefcase className="w-4 h-4 text-primary" />
+                            <h3 className="text-xl font-semibold">{exp.role}</h3>
+                          </div>
+                          <p className="text-primary font-medium">{exp.company}</p>
+                        </div>
+                        {index === 0 && (
+                          <span className="px-2 py-1 text-xs font-mono uppercase tracking-wide border border-primary text-primary">
+                            Latest
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-4 mb-6">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          {exp.period}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          {exp.location}
+                        </span>
+                      </div>
+
+                      <ul className="space-y-4">
+                        {exp.bullets.map((bullet, i) => (
+                          <li key={i} className="flex gap-3">
+                            <span className="text-primary mt-1.5">▸</span>
+                            <span className="text-muted-foreground">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-
-                    <h3 className="text-xl font-bold mb-3">{exp.company}</h3>
-
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-6">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {exp.period}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {exp.location}
-                      </span>
-                    </div>
-
-                    <ul className="space-y-4">
-                      {exp.bullets.map((bullet, i) => (
-                        <li key={i} className="flex gap-3">
-                          <span className="text-primary mt-1.5">▸</span>
-                          <span className="text-muted-foreground">{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>

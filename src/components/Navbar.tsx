@@ -54,13 +54,12 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleNavClick(link.href)}
                 className="px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                <span className="text-primary font-mono text-xs mr-1">0{index + 1}.</span>
                 {link.name}
               </button>
             ))}
@@ -84,13 +83,12 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-2">
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => handleNavClick(link.href)}
                   className="px-4 py-3 text-left text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
                 >
-                  <span className="text-primary font-mono text-xs mr-2">0{index + 1}.</span>
                   {link.name}
                 </button>
               ))}

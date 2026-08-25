@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Send, Loader2, CheckCircle, Github, Linkedin, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Reveal from "@/components/Reveal";
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,25 +58,26 @@ const ContactSection = () => {
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">06. Contact</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Get In Touch</h2>
-            <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-              I'm currently looking for Master's thesis and internship opportunities in computer
-              vision and deep learning. Whether you have a question or just want to say hi, feel
-              free to reach out!
-            </p>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Get In Touch</h2>
+              <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
+                I'm currently looking for Master's thesis and internship opportunities in computer
+                vision and deep learning. Whether you have a question or just want to say hi, feel
+                free to reach out!
+              </p>
+            </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact info */}
-            <div className="space-y-8">
+            <Reveal delay={60} className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold mb-6">Let's Connect</h3>
                 <div className="space-y-4">
                   <a
                     href="mailto:dvnsyaswanth@gmail.com"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all group"
+                    className="flex items-center gap-4 p-4 rounded-none bg-card border border-border hover:border-primary/50 transition-all group"
                   >
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Mail className="w-5 h-5 text-primary" />
@@ -89,8 +91,8 @@ const ContactSection = () => {
                   </a>
 
                   <a
-                    href="tel:+43 793430467"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-all group"
+                    href="tel:+46793430467"
+                    className="flex items-center gap-4 p-4 rounded-none bg-card border border-border hover:border-primary/50 transition-all group"
                   >
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Phone className="w-5 h-5 text-primary" />
@@ -103,13 +105,13 @@ const ContactSection = () => {
                     </div>
                   </a>
 
-                  <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
+                  <div className="flex items-center gap-4 p-4 rounded-none bg-card border border-border">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Location</p>
-                      <p className="font-medium">Karkskrona, Sweden</p>
+                      <p className="font-medium">Karlskrona, Sweden</p>
                     </div>
                   </div>
                 </div>
@@ -137,13 +139,13 @@ const ContactSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* Contact form */}
-            <div className="p-6 md:p-8 rounded-2xl bg-card border border-border">
+            <Reveal delay={120} className="p-6 md:p-8 rounded-none bg-card border border-border">
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center h-full text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 rounded-none bg-primary/10 flex items-center justify-center mb-4">
                     <CheckCircle className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
@@ -217,7 +219,7 @@ const ContactSection = () => {
                   </Button>
                 </form>
               )}
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { GraduationCap, Award, Calendar } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const education = [
   {
@@ -60,10 +61,11 @@ const EducationSection = () => {
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">05. Education</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Academic Background</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Academic Background</h2>
+            </div>
+          </Reveal>
 
           {/* Education timeline */}
           <div className="relative mb-16">
@@ -75,68 +77,72 @@ const EducationSection = () => {
                 <div key={index} className="relative pl-16">
                   {/* Timeline dot */}
                   <div
-                    className={`absolute left-4 w-5 h-5 rounded-full border-4 ${
+                    className={`absolute left-4 w-5 h-5 rounded-none border-4 ${
                       edu.current
-                        ? "bg-primary border-background animate-pulse"
+                        ? "bg-primary border-background"
                         : "bg-background border-border"
                     }`}
                   />
 
-                  <div className="p-6 rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300">
-                    <div className="flex flex-wrap items-start justify-between gap-4">
-                      <div>
-                        <div className="flex items-center gap-2 text-primary mb-1">
-                          <GraduationCap className="w-4 h-4" />
-                          <span className="text-sm font-medium">
-                            {edu.current ? "Currently Pursuing" : edu.period}
-                          </span>
-                        </div>
-                        <h3 className="text-lg font-bold">{edu.degree}</h3>
-                        <p className="text-muted-foreground">
-                          {edu.institution}, {edu.location}
-                        </p>
-                        {edu.coursework && (
-                          <p className="text-sm text-muted-foreground mt-2">
-                            <span className="font-medium">Relevant Coursework:</span> {edu.coursework}
+                  <Reveal delay={index * 80}>
+                    <div className="p-6 rounded-none bg-background border border-border hover:border-primary/30 transition-colors duration-300">
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <div className="flex items-center gap-2 text-primary mb-1">
+                            <GraduationCap className="w-4 h-4" />
+                            <span className="text-sm font-medium">
+                              {edu.current ? "Currently Pursuing" : edu.period}
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-semibold">{edu.degree}</h3>
+                          <p className="text-muted-foreground">
+                            {edu.institution}, {edu.location}
                           </p>
+                          {edu.coursework && (
+                            <p className="text-sm text-muted-foreground mt-2">
+                              <span className="font-medium">Relevant Coursework:</span> {edu.coursework}
+                            </p>
+                          )}
+                        </div>
+                        {edu.grade && (
+                          <span className="px-3 py-1 text-sm rounded-lg bg-primary/10 text-primary font-semibold">
+                            {edu.grade}
+                          </span>
                         )}
                       </div>
-                      {edu.grade && (
-                        <span className="px-3 py-1 text-sm rounded-lg bg-primary/10 text-primary font-semibold">
-                          {edu.grade}
-                        </span>
-                      )}
                     </div>
-                  </div>
+                  </Reveal>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Certifications */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Award className="w-5 h-5 text-primary" />
-              Certifications
-            </h3>
+          <Reveal>
+            <div>
+              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <Award className="w-5 h-5 text-primary" />
+                Certifications
+              </h3>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {certifications.map((cert, index) => (
-                <a
-                  key={index}
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group p-4 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300"
-                >
-                  <h4 className="font-semibold group-hover:text-primary transition-colors">
-                    {cert.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                </a>
-              ))}
+              <div className="grid sm:grid-cols-2 gap-4">
+                {certifications.map((cert, index) => (
+                  <a
+                    key={index}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-4 rounded-none bg-background border border-border hover:border-primary/50 transition-colors duration-300"
+                  >
+                    <h4 className="font-medium group-hover:text-primary transition-colors">
+                      {cert.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
