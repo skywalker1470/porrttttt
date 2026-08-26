@@ -1,12 +1,14 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Github } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const experiences = [
   {
     role: "Computer Vision Engineer (Pose & Interaction)",
     company: "SolarFi's FairWAI",
+    note: "Full work under NDA",
     period: "June 2026 - August 2026",
     location: "Boston, USA",
+    github: "https://github.com/skywalker1470/PoseApp",
     bullets: [
       <>
         Built a perception pipeline for multi-person pose estimation across two hardware
@@ -45,39 +47,48 @@ const experiences = [
         fairness across demographics.
       </>,
       <>
-        Collaborated within a 3-person team, syncing on events and track IDs through biweekly
-        hardware integration meetings.
+        Worked as part of a 3-person team, providing events and track IDs and holding hardware
+        integration meetings <span className="text-primary font-semibold">three times a week</span>.
       </>,
     ],
   },
   {
     role: "Research Intern",
     company: "Defence Research and Development Organisation (DRDO)",
+    note: null,
     period: "July 2025 - September 2025",
     location: "Hyderabad, Telangana",
+    github: "https://github.com/skywalker1470/DRDO",
     bullets: [
       <>
-        Developed a novel approach to the P-Center Facility Location problem, replacing costly
-        fitness evaluations with a pre-trained deep neural network surrogate, transferring
-        knowledge from an expensive exact model to a cheaper approximation and speeding up
-        convergence by <span className="text-primary font-semibold">an order of magnitude</span>.
+        Developed and tested a novel approach to the P-Center facility location problem, combining
+        an evolutionary Invasive Weed Optimization algorithm with deep neural network fitness
+        function approximation.
       </>,
       <>
-        Designed adaptive Gaussian mutations with population-diversity-based sigma scaling to
-        balance exploration and exploitation without re-evaluating the whole search space.
+        Implemented a rank-based probability scheme for parent/survivor selection to maintain
+        population diversity and prevent premature convergence, paired with a self-adaptive
+        Gaussian mutation strategy using a logarithmic update law for mutation strength.
       </>,
       <>
-        Ran ablation studies comparing full-exact, surrogate-only, and hybrid evaluation
-        strategies to quantify the accuracy/efficiency tradeoff of replacing exact computation
-        with a learned model.
+        Demonstrated up to <span className="text-primary font-semibold">100x speedup</span> over
+        pure Invasive Weed Optimization (371.03s to 3.11s at N=3000, P=100) at the cost of a small
+        drop in solution quality, benchmarked across instances from N=10 to N=3000 nodes and P=3
+        to P=100 centers on symmetric random distance matrices.
       </>,
       <>
-        Achieved <span className="text-primary font-semibold">8-10x faster</span> convergence
-        than standard genetic algorithms, with solutions within{" "}
-        <span className="text-primary font-semibold">1.5%</span> of optimal on OR-Lib and TSPLIB
-        benchmarks.
+        Trained a surrogate neural network on fitness data gathered from the evolutionary runs,
+        showing prediction accuracy improves with training data volume{" "}
+        <span className="text-primary font-semibold">(R² ~0.12-0.67)</span> across instance sizes.
       </>,
-      <>Collaborated with senior scientists to document methods and report results.</>,
+      <>
+        Built a variant of the Artificial Bee Colony algorithm as an additional baseline to
+        compare the hybrid approach against a different metaheuristic from the literature.
+      </>,
+      <>
+        Wrote a technical report formulating the task as an integer linear program and presenting
+        a comparative experimental study of the algorithms.
+      </>,
     ],
   },
 ];
@@ -117,13 +128,32 @@ const ExperienceSection = () => {
                             <Briefcase className="w-4 h-4 text-primary" />
                             <h3 className="text-xl font-semibold">{exp.role}</h3>
                           </div>
-                          <p className="text-primary font-medium">{exp.company}</p>
+                          <p className="text-primary font-medium">
+                            {exp.company}
+                            {exp.note && (
+                              <span className="text-muted-foreground font-normal italic"> ({exp.note})</span>
+                            )}
+                          </p>
                         </div>
-                        {index === 0 && (
-                          <span className="px-2 py-1 text-xs font-mono uppercase tracking-wide border border-primary text-primary">
-                            Latest
-                          </span>
-                        )}
+                        <div className="flex items-center gap-2">
+                          {index === 0 && (
+                            <span className="px-2 py-1 text-xs font-mono uppercase tracking-wide border border-primary text-primary">
+                              Latest
+                            </span>
+                          )}
+                          {exp.github && (
+                            <a
+                              href={exp.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`View ${exp.company} repository on GitHub`}
+                              className="flex items-center gap-1.5 px-2 py-1 text-xs font-mono border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                            >
+                              <Github className="w-3.5 h-3.5" />
+                              Repo
+                            </a>
+                          )}
+                        </div>
                       </div>
 
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-4 mb-6">

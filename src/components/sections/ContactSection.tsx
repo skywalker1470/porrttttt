@@ -125,7 +125,8 @@ const ContactSection = () => {
                     href="https://www.linkedin.com/in/yaswanth-deevi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/10 transition-all"
+                    aria-label="LinkedIn"
+                    className="p-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
                   </a>
@@ -133,7 +134,8 @@ const ContactSection = () => {
                     href="https://github.com/skywalker1470"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/10 transition-all"
+                    aria-label="GitHub"
+                    className="p-3 rounded-lg bg-card border border-border hover:border-primary/50 hover:bg-primary/10 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     <Github className="w-5 h-5 text-muted-foreground hover:text-primary" />
                   </a>

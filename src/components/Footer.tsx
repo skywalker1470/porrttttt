@@ -10,7 +10,8 @@ const Footer = () => {
               href="https://github.com/skywalker1470"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub"
+              className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -18,13 +19,15 @@ const Footer = () => {
               href="https://www.linkedin.com/in/yaswanth-deevi"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:dvnsyaswanth@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Email"
+              className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <Mail className="w-5 h-5" />
             </a>

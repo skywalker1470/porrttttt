@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Smartphone, MessageSquare, Brain, ScanFace, Users, TrendingDown, Activity, Radio } from "lucide-react";
+import { ExternalLink, Github, Smartphone, MessageSquare, ScanFace, Users, TrendingDown, Activity, Radio, Type, Banknote } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const projects = [
+  {
+    icon: Type,
+    title: "Classifier Robustness to Character-Level Noise",
+    subtitle: "NLP / Robustness Research",
+    description:
+      "Controlled robustness study on SST-2 sentiment classification across four classifiers (Logistic Regression, Multinomial Naive Bayes, Linear SVM, Hard Voting Ensemble) under three character-level noise models at varying intensities and five random seeds. Paired t-tests across 15 noise conditions found no significant robustness gap between the ensemble and Logistic Regression, while Naive Bayes proved sensitive to out-of-vocabulary tokens under character-deletion noise.",
+    technologies: ["Python", "Scikit-learn", "SST-2", "NLP", "Statistical Testing"],
+    highlights: ["Paired t-Test", "15 Noise Conditions", "4 Classifiers"],
+    github: "https://github.com/skywalker1470/Research_Methodolgy",
+  },
   {
     icon: Radio,
     title: "Neural Digital Pre-Distortion (OpenDPD)",
@@ -34,14 +44,14 @@ const projects = [
     github: "https://github.com/skywalker1470/Heating_System_Anomaly_Detection",
   },
   {
-    icon: Brain,
-    title: "Hybrid Optimization Framework",
-    subtitle: "DRDO Research",
+    icon: Banknote,
+    title: "LSTM Autoencoder for Financial Fraud Detection",
+    subtitle: "Unsupervised Anomaly Detection",
     description:
-      "Metaheuristic optimization combining evolutionary strategies with deep neural networks. Achieved 10x faster convergence on P-Center Problems with 70% reduction in computation time.",
-    technologies: ["Python", "Deep Learning", "Evolutionary Algorithms", "NumPy"],
-    highlights: ["10x Convergence", "70% Time Saved", "Research Grade"],
-    github: "https://github.com/skywalker1470/DRDO",
+      "Unsupervised reconstruction-based fraud detection on a PaySim-like dataset of 6.36M transactions, using sliding windows of 10 chronologically ordered transactions to train single-layer and bidirectional LSTM autoencoders without fraud labels. The bidirectional autoencoder outperformed Isolation Forest even under extreme class imbalance, and diagnostic plots exposed a good-ranking-but-poor-precision tradeoff at fixed thresholds.",
+    technologies: ["PyTorch", "LSTM", "Autoencoder", "Isolation Forest", "Time-Series"],
+    highlights: ["ROC-AUC 0.838", "6.36M Transactions", "Unsupervised"],
+    github: "https://github.com/skywalker1470/LSTM_Autoencoder_Financial_Fraud",
   },
   {
     icon: Users,
@@ -109,7 +119,8 @@ const ProjectsSection = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary"
+                        aria-label={`View ${project.title} on GitHub`}
+                        className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                       >
                         <Github className="w-5 h-5" />
                       </a>

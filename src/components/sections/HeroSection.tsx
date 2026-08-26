@@ -47,10 +47,8 @@ const HeroSection = () => {
           {/* Description */}
           <Reveal delay={200}>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Focused on <span className="text-foreground">deep learning</span>,{" "}
-              <span className="text-foreground">computer vision</span>, and multi-modal
-              sensor fusion, from model compression and cross-hardware deployment to real-time
-              perception pipelines. Currently pursuing a Master's at BTH, Sweden.
+              I build computer vision systems and get deep learning models running efficiently
+              across different hardware. Currently pursuing a Master's at BTH, Sweden.
             </p>
           </Reveal>
 
@@ -98,7 +96,8 @@ const HeroSection = () => {
                 href="https://www.linkedin.com/in/yaswanth-deevi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+                className="p-3 rounded-lg text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -106,7 +105,8 @@ const HeroSection = () => {
                 href="https://github.com/skywalker1470"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+                className="p-3 rounded-lg text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <Github className="w-6 h-6" />
               </a>

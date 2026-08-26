@@ -117,3 +117,10 @@
     to { opacity: 1; }
   }
 }
+
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none;
+  }
+}

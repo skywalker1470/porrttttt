@@ -44,9 +44,14 @@ const education = [
 
 const certifications = [
   {
+    title: "Runner-up, PEMA Ottonel Popesco Student Challenge 2025/2026",
+    issuer: "Reached the finals representing JNTU Hyderabad",
+    link: "https://github.com/skywalker1470/PEMA-_cerificate_and_report",
+  },
+  {
     title: "Certificate of Merit - AI4ICPS",
     issuer: "IIT KGP (in collaboration with TCS Ion)",
-    link: "https://github.com/skywalker1470/iitkgp.git",
+    link: "https://github.com/skywalker1470/iitkgp",
   },
   {
     title: "Certificate of Completion",
@@ -125,21 +130,28 @@ const EducationSection = () => {
                 Certifications
               </h3>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                {certifications.map((cert, index) => (
-                  <a
-                    key={index}
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group p-4 rounded-none bg-background border border-border hover:border-primary/50 transition-colors duration-300"
-                  >
-                    <h4 className="font-medium group-hover:text-primary transition-colors">
-                      {cert.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  </a>
-                ))}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certifications.map((cert, index) =>
+                  cert.link ? (
+                    <a
+                      key={index}
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group p-4 rounded-none bg-background border border-border hover:border-primary/50 transition-colors duration-300"
+                    >
+                      <h4 className="font-medium group-hover:text-primary transition-colors">
+                        {cert.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                    </a>
+                  ) : (
+                    <div key={index} className="p-4 rounded-none bg-background border border-border">
+                      <h4 className="font-medium">{cert.title}</h4>
+                      <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </Reveal>

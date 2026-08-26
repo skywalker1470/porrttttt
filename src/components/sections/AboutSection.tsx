@@ -6,7 +6,7 @@ const highlights = [
     icon: Brain,
     title: "Computer Vision & Perception",
     description:
-      "Multi-person pose estimation, deepfake detection, and multi-modal sensor fusion across camera, pose, and raw signal streams",
+      "Multi-person pose estimation, deepfake detection, and frame-level video classification",
   },
   {
     icon: Code2,
@@ -50,9 +50,8 @@ const AboutSection = () => {
                   I'm a Computer Science Master's student at Blekinge Tekniska Högskola (BTH) with
                   substantial experience in{" "}
                   <span className="text-foreground">deep learning</span> and{" "}
-                  <span className="text-foreground">computer vision</span>, and
-                  processing multi-modal sensor streams, combining camera, pose, and raw signal
-                  data into a unified decision-making pipeline.
+                  <span className="text-foreground">computer vision</span>, building systems that
+                  combine camera, pose, and signal inputs into a single decision-making pipeline.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6">
