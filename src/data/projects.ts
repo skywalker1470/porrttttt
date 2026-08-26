@@ -10,6 +10,7 @@ export interface Project {
   github?: string;
   slug?: string;
   readmeUrl?: string;
+  older?: boolean;
 }
 
 export const projects: Project[] = [
@@ -46,6 +47,8 @@ export const projects: Project[] = [
     technologies: ["PyTorch", "EfficientNet-B0", "Flask", "MTCNN", "ffmpeg"],
     highlights: ["Frame-level Inference", "Flask Deployment", "H.264 Re-encoding"],
     github: "https://github.com/skywalker1470/DeepFakeReworked",
+    slug: "deepfake-detection",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/DeepFakeReworked/main/readme.md",
   },
   {
     icon: Activity,
@@ -56,6 +59,8 @@ export const projects: Project[] = [
     technologies: ["Python", "FP-Growth", "NumPy", "SciPy", "Scikit-learn"],
     highlights: ["<30s Latency", "4 Baseline Comparison", "Pattern Stability Analysis"],
     github: "https://github.com/skywalker1470/Heating_System_Anomaly_Detection",
+    slug: "heating-anomaly-detection",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/Heating_System_Anomaly_Detection/main/README.md",
   },
   {
     icon: Banknote,
@@ -66,6 +71,8 @@ export const projects: Project[] = [
     technologies: ["PyTorch", "LSTM", "Autoencoder", "Isolation Forest", "Time-Series"],
     highlights: ["ROC-AUC 0.838", "6.36M Transactions", "Unsupervised"],
     github: "https://github.com/skywalker1470/LSTM_Autoencoder_Financial_Fraud",
+    slug: "lstm-fraud-detection",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/LSTM_Autoencoder_Financial_Fraud/main/README.md",
   },
   {
     icon: Users,
@@ -76,6 +83,9 @@ export const projects: Project[] = [
     technologies: ["Python", "Scikit-learn", "SciPy", "Pandas", "Matplotlib"],
     highlights: ["Statistical Hypothesis Testing", "Cohort Retention Analysis", "Dual Classifiers"],
     github: "https://github.com/skywalker1470/HR-Analytics",
+    slug: "hr-analytics",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/HR-Analytics/main/README.md",
+    older: true,
   },
   {
     icon: TrendingDown,
@@ -85,7 +95,7 @@ export const projects: Project[] = [
       "End-to-end pipeline combining K-Means clustering (K=4) for customer segmentation with a Gradient Boosting classifier for churn prediction. Achieved CV ROC AUC of 0.87 ± 0.01 on 5-fold stratified cross-validation. Segments include Champions, Loyalists, Dormant, and At-Risk customers.",
     technologies: ["Python", "Scikit-learn", "XGBoost", "PCA", "Pandas"],
     highlights: ["ROC AUC: 0.87", "4 Customer Segments", "Interactive Dashboard"],
-    github: "https://github.com/skywalker1470/Customer_segmentation_and_Churn",
+    older: true,
   },
   {
     icon: Smartphone,
@@ -96,6 +106,9 @@ export const projects: Project[] = [
     technologies: ["PyTorch", "Android", "CNN", "TorchScript", "Mobile ML"],
     highlights: ["Mobile Optimized", "Real-time Inference"],
     github: "https://github.com/skywalker1470/MNIST_project",
+    slug: "mnist-digit-classification",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/MNIST_project/main/README.md",
+    older: true,
   },
   {
     icon: MessageSquare,
@@ -105,5 +118,6 @@ export const projects: Project[] = [
       "Full-stack real-time chat application built with AWS services. Features authentication via Cognito, serverless Lambda functions, and DynamoDB for persistent storage.",
     technologies: ["AWS", "Cognito", "Lambda", "DynamoDB", "S3", "JavaScript"],
     highlights: ["Real-time Messaging", "Serverless", "Secure Auth"],
+    older: true,
   },
 ];

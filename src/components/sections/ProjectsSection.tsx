@@ -24,17 +24,24 @@ const ProjectsSection = () => {
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <project.icon className="w-6 h-6 text-primary" />
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View ${project.title} on GitHub`}
-                        className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {project.older && (
+                        <span className="px-2 py-1 text-xs font-mono uppercase tracking-wide border border-border text-muted-foreground">
+                          Older Project
+                        </span>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${project.title} on GitHub`}
+                          className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                        >
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   {/* Content */}

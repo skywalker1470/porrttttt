@@ -19,6 +19,24 @@ const resolveAssetUrl = (src: string | undefined, baseUrl: string | undefined): 
   }
 };
 
+// Resolves a relative repo-path link (e.g. "backbones/" or "fpga_inference/export_onnx.py")
+// from a README against the actual GitHub blob/tree view for that file or directory.
+const resolveRepoLink = (href: string, readmeUrl: string | undefined): string => {
+  if (/^https?:\/\//i.test(href) || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("#")) {
+    return href;
+  }
+  const match = readmeUrl?.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\//);
+  if (!match) return href;
+  const [, owner, repo, branch] = match;
+  const kind = href.endsWith("/") ? "tree" : "blob";
+  const base = `https://github.com/${owner}/${repo}/${kind}/${branch}/`;
+  try {
+    return new URL(href, base).toString();
+  } catch {
+    return href;
+  }
+};
+
 const ProjectReadme = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
@@ -164,6 +182,20 @@ const ProjectReadme = () => {
                           {...imgProps}
                         />
                       ),
+                      a: ({ href, children, ...aProps }) => {
+                        const resolvedHref = href ? resolveRepoLink(href, project.readmeUrl) : href;
+                        const isNavigational = !!resolvedHref && !resolvedHref.startsWith("#");
+                        return (
+                          <a
+                            href={resolvedHref}
+                            target={isNavigational ? "_blank" : undefined}
+                            rel={isNavigational ? "noopener noreferrer" : undefined}
+                            {...aProps}
+                          >
+                            {children}
+                          </a>
+                        );
+                      },
                     }}
                   >
                     {content}
