@@ -39,19 +39,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a
-            href="#"
-            className="text-xl font-bold text-gradient"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            YD
-          </a>
-
+        <div className="flex items-center justify-end h-16 md:h-20">
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
