@@ -1,4 +1,4 @@
-import { Smartphone, MessageSquare, ScanFace, Users, TrendingDown, Activity, Radio, Type, Banknote, type LucideIcon } from "lucide-react";
+import { Smartphone, MessageSquare, ScanFace, Users, TrendingDown, Activity, Radio, Type, Banknote, Gauge, type LucideIcon } from "lucide-react";
 
 export interface Project {
   icon: LucideIcon;
@@ -25,6 +25,18 @@ export const projects: Project[] = [
     github: "https://github.com/skywalker1470/Research_Methodolgy",
     slug: "classifier-robustness",
     readmeUrl: "https://raw.githubusercontent.com/skywalker1470/Research_Methodolgy/main/README.md",
+  },
+  {
+    icon: Gauge,
+    title: "AI-Based Fault Detection & Parameter Quantification on Engine Sensor Data",
+    subtitle: "Surrogate Modeling / Predictive Maintenance",
+    description:
+      "Surrogate-model pipeline for the NASA C-MAPSS turbofan engine degradation dataset, replacing an expensive per-row physics-style calculation with a DNN surrogate, cutting RUL prediction error from RMSE 70.9 to 15.4. A fault detection layer atop the surrogate output compares Isolation Forest, rule-based deviation detection, surrogate threshold detection, and a hybrid surrogate-and-rule approach, with the hybrid achieving the best precision/recall trade-off (F1 0.813). A three-way ablation (exact physics-style vs. surrogate vs. hybrid) surfaced a negative result: OR-combining detectors lowers precision.",
+    technologies: ["Python", "PyTorch", "Surrogate Modeling", "C-MAPSS", "Isolation Forest"],
+    highlights: ["RMSE 70.9 → 15.4", "F1 0.813", "3-Way Ablation Study"],
+    github: "https://github.com/skywalker1470/AI_Based_Parameter_Quantification",
+    slug: "engine-fault-detection",
+    readmeUrl: "https://raw.githubusercontent.com/skywalker1470/AI_Based_Parameter_Quantification/main/README.md",
   },
   {
     icon: Radio,
